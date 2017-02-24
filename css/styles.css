@@ -1,0 +1,107 @@
+/* css */
+
+
+
+a {
+    color:#007DB3;
+}
+.branding h1 {
+    text-indent:-99999px;
+    font-size:0;
+}
+
+html {
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    line-height:1.5;
+} 
+
+
+/* This technique is used to move the underline alittle below the content, so that the descending characters are not overlapping the line */
+a {
+    display:inline-block;
+    text-decoration: none;
+    text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+        0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+        0.1em 0 0 #fff, -0.1em 0 0 #fff,
+        0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+    background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    background-repeat: repeat-x;
+    background-position: bottom 0.05em center;
+    background-size: 100% 0.15em;
+} 
+
+
+/* this technique is used to make links for readable */
+a:focus {
+    outline: none;
+    text-shadow:none;
+    background-image:none;
+    background-color: #007DB3;
+    padding-left:0.2em;
+    color:#fff;
+}
+
+
+/* this technique is used to distinguish the nature of links */
+a[href^="http"]:not([href*="example.com"])::after {
+    content:"";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('../images/icon_external.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75% auto;
+}
+
+
+/* this technique is used to distinguish the nature of links */
+a[href*=".pdf"]::after {
+    content:"";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('../images/icon_pdf.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75% auto;
+}
+
+
+/* Rhythmatic Sizing */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    line-height:1;
+}
+
+h1 {
+    font-size:3.375rem;
+}
+
+h2 {
+    font-size:2.25rem
+}
+
+h3, h4, h5, h6 {
+    font-size:1.5rem
+}
+
+
+/* creates a margin top on all things next to things within the main section */
+    main section * + * {
+        margin-top: 1.5em;
+    }
+
+
+/*
+    * + h2,
+    * + h3,
+    * + h4,
+    * + h5,
+    * + h6 {
+        margin-top: 1.5em;
+        margin-bottom:0;
+    }
+
+*/
